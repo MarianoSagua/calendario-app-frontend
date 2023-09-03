@@ -29,6 +29,13 @@ export const LoginPage = () => {
   const onRegisterSubmit = (data) => {
     const { password, password2 } = data;
     if (password !== password2) {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Las contraseñas no coinciden!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       reset();
       return;
     }
