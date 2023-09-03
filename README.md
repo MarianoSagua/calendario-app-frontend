@@ -1,4 +1,4 @@
-# Simulacion Tienda de Videojuegos StarGames
+# CALENDAR APP
 
 DESCRIPCION DE LA APP:
 
