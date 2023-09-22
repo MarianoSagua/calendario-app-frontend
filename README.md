@@ -16,7 +16,6 @@ Utilizo react para la parte frontend de la aplicacion y node js para controlar y
 - REACT BIG CALENDAR
 - DATE FNS
 - REACT HOOK FORM
-- REACT MODAL
 - REACT REDUX
 - REDUX TOOLKIT
 - AXIOS

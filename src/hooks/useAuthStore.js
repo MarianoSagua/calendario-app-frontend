@@ -33,7 +33,7 @@ export const useAuthStore = () => {
   const startRegister = async ({ email, password, name }) => {
     dispatch(onChecking());
     try {
-      const { data } = await instance.post("auth/new", {
+      const { data } = await instance.post("auth/register", {
         email,
         password,
         name,

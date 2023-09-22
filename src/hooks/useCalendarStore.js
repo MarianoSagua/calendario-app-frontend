@@ -4,19 +4,31 @@ import {
   onAddNewEvent,
   onDeleteEvent,
   onLoadEvents,
+  onRemoveNewEventState,
   onSetActiveEvent,
+  onSetNewEventState,
   onUpdateEvent,
 } from "../store/slices/calendarSlice";
 import { convertEventsToDate } from "../helpers";
 import Swal from "sweetalert2";
 
 export const useCalendarStore = () => {
-  const { events, activeEvent } = useSelector((state) => state.calendar);
+  const { events, activeEvent, newEventState } = useSelector(
+    (state) => state.calendar
+  );
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   const setActiveEvent = (calendarEvent) => {
     dispatch(onSetActiveEvent(calendarEvent));
+  };
+
+  const setNewEventState = () => {
+    dispatch(onSetNewEventState());
+  };
+
+  const setRemoveNewEventState = () => {
+    dispatch(onRemoveNewEventState());
   };
 
   const startSavingEvent = async (calendarEvent) => {
@@ -75,10 +87,13 @@ export const useCalendarStore = () => {
   return {
     events,
     activeEvent,
-    hasEventSelected: !!activeEvent,
+    newEventState,
+
     setActiveEvent,
     startSavingEvent,
     startDeletingEvent,
     startLoadingEvents,
+    setNewEventState,
+    setRemoveNewEventState,
   };
 };

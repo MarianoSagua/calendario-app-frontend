@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+* {
+  font-family: "Roboto Slab", serif;
+}
+
+/* Modal */
+.ReactModalPortal {
+  div {
+    opacity: 0;
+  }
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.modal-fondo {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+/* FABS */
+.fab {
+  border-radius: 100%;
+  bottom: 25px;
+  font-size: 30px;
+  padding: 25px;
+  position: fixed;
+  right: 25px;
+  background-color: #c8b6ff;
+  color: rgba(0, 0, 0, 0.795);
+
+  &:hover {
+    background-color: #c8b6ff;
+    color: rgba(0, 0, 0, 0.795);
+    opacity: 0.9;
+  }
+}
+
+.themeModeBtn {
+  border-radius: 100%;
+  position: fixed;
+  background-color: #023047;
+  color: white;
+  bottom: 25px;
+  right: 115px;
+  border: none;
+  text-align: center;
+  padding: 25px;
+
+  &:hover {
+    background-color: #023047;
+    color: white;
+    opacity: 0.9;
+  }
+}
+
+.rbc-toolbar {
+  padding: 0 15px;
+
+  @media (max-width: 692px) {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding-bottom: 25px;
+    margin: 0 auto;
+
+    span:nth-child(1) {
+      order: +1;
+      margin: 15px 0;
+    }
+
+    span:nth-child(2) {
+      order: +1;
+    }
+
+    span:nth-child(3) {
+      order: -2;
+    }
+  }
+}
+
+.navbar-logoutPart {
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      max-width: 150px;
+      margin-top: 10px;
+      background: none;
+      color: black;
+      border: none;
+      padding: 0;
+      margin: 0;
+      text-align: start;
+      margin-top: 10px;
+      color: red;
+      &:hover {
+        opacity: 0.9;
+        background: none;
+        color: rgba(0, 0, 0, 0.573);
+      }
+    }
+  }
+}

@@ -1,9 +1,8 @@
 import { addHours } from "date-fns";
-import { useCalendarStore, useUiStore } from "../../hooks";
+import { useCalendarStore } from "../../hooks";
 
 export const FabAddNew = () => {
-  const { openDateModal } = useUiStore();
-  const { setActiveEvent } = useCalendarStore();
+  const { setActiveEvent, setNewEventState } = useCalendarStore();
 
   const handleClickNew = () => {
     setActiveEvent({
@@ -17,14 +16,17 @@ export const FabAddNew = () => {
         name: "Mariano",
       },
     });
-    openDateModal();
+    setNewEventState();
   };
 
   return (
-    <>
-      <button onClick={handleClickNew} className="btn btn-primary fab">
-        <i className="fas fa-plus"></i>
-      </button>
-    </>
+    <button
+      onClick={handleClickNew}
+      className="btn fab"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      <i className="fas fa-plus"></i>
+    </button>
   );
 };
