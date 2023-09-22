@@ -20,6 +20,3 @@ Utilizo react para la parte frontend de la aplicacion y node js para controlar y
 - REDUX TOOLKIT
 - AXIOS
 - SWEET ALERT 2
-- NODE JS
-- EXPRESS JS
-- MONGO DB
