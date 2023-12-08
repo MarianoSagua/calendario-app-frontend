@@ -61,7 +61,7 @@ export const CalendarModal = () => {
 
     if (isNaN(difference) || difference <= 0) {
       Swal.fire("Fechas incorrectas", "Revisar las fechas ingresadas", "error");
-      
+
       return;
     }
 
@@ -125,6 +125,7 @@ export const CalendarModal = () => {
                   timeCaption="Hora"
                 />
               </div>
+
               <div className="form-group mb-3 d-flex flex-column align-items-start">
                 <label className="form-label">Fecha y hora fin</label>
                 <DatePicker
@@ -138,7 +139,9 @@ export const CalendarModal = () => {
                   timeCaption="Hora"
                 />
               </div>
+
               <hr />
+
               <div className="form-group mb-2">
                 <label className="form-label">Titulo y notas</label>
                 <input
@@ -151,6 +154,7 @@ export const CalendarModal = () => {
                   onChange={onInputChange}
                 />
               </div>
+
               <div className="form-group mb-3">
                 <textarea
                   type="text"
@@ -162,6 +166,7 @@ export const CalendarModal = () => {
                   onChange={onInputChange}
                 />
               </div>
+              
               {newEventState ? (
                 <button
                   type="submit"

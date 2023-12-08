@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import instance from "../API/calendarApi";
+import instance from "../api/calendarApi";
 import {
   onAddNewEvent,
   onDeleteEvent,

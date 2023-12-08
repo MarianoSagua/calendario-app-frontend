@@ -28,9 +28,9 @@ export const calendarSlice = createSlice({
       state.events = state.events.map((event) => {
         if (event.id === payload.id) {
           return payload;
+        } else {
+          return event;
         }
-
-        return event;
       });
     },
     onDeleteEvent: (state) => {

@@ -16,6 +16,7 @@ export const FabAddNew = () => {
         name: "Mariano",
       },
     });
+    
     setNewEventState();
   };
 

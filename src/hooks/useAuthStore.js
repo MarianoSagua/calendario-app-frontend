@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import instance from "../API/calendarApi";
+import instance from "../api/calendarApi";
 import {
   onChecking,
   onClearErrorMessage,
@@ -19,8 +19,10 @@ export const useAuthStore = () => {
         email,
         password,
       });
+
       localStorage.setItem("token", data.token);
       localStorage.setItem("token-init-date", new Date().getTime());
+
       dispatch(onLogin({ name: data.name, uid: data.uid }));
     } catch (error) {
       dispatch(onLogout("Email o contraseña incorrecta!"));
@@ -32,14 +34,17 @@ export const useAuthStore = () => {
 
   const startRegister = async ({ email, password, name }) => {
     dispatch(onChecking());
+
     try {
       const { data } = await instance.post("auth/register", {
         email,
         password,
         name,
       });
+
       localStorage.setItem("token", data.token);
       localStorage.setItem("token-init-date", new Date().getTime());
+
       dispatch(onLogin({ name: data.name, uid: data.uid }));
     } catch (error) {
       const { response } = error;
@@ -62,6 +67,7 @@ export const useAuthStore = () => {
 
       localStorage.setItem("token", data.token);
       localStorage.setItem("token-init-date", new Date().getTime());
+
       dispatch(onLogin({ name: data.name, uid: data.uid }));
     } catch (error) {
       localStorage.clear();

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Calendar } from "react-big-calendar";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+import { useAuthStore, useCalendarStore } from "../../hooks";
 import { getMessagesES, localizer } from "../../helpers";
 import { CalendarEvent, CalendarModal, FabAddNew, Navbar } from "../components";
-import { useAuthStore, useCalendarStore } from "../../hooks";
+import { Calendar } from "react-big-calendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
 export const CalendarPage = () => {
   const { user } = useAuthStore();
