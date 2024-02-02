@@ -80,7 +80,7 @@ export const LoginPage = () => {
               alt="Icono Calendario"
             />
           </span>{" "}
-          Tu Calendario
+          Calendario
         </h1>
         <small className="login-container-subtitle">
           Registrate o inicia sesion para acceder a un calendario dinamico donde

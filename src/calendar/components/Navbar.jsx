@@ -21,7 +21,7 @@ export const Navbar = () => {
             height="34"
             class="d-inline-block align-text-center"
           />
-          Tu Calendario
+          Calendario
         </div>
         <button
           class="navbar-toggler border border-0"
